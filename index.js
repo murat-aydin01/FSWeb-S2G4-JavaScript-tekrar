@@ -50,8 +50,8 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(r) {
+  return pi * r * 2;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -64,8 +64,8 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(r, pi) {
+  return Math.pow(r,2) * pi;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -98,28 +98,56 @@ let ucetambolunenler,
   tekraredensayilar;
 
 // 3a çözümü
+enkucuk=sayilar[0]
+for(let i=0;i<sayilar.length;i++){
+  if(sayilar[i]<enkucuk){
+    enkucuk=sayilar[i];
+  }
+}
+console.log(enkucuk);
 
-/* kodlar buraya */
+enbuyuk=sayilar[0]
+for(let i=0;i<sayilar.length;i++){
+  if(sayilar[i]>enbuyuk){
+    enbuyuk=sayilar[i];
+  }
+}
+console.log(enbuyuk);
 
 // 3b çözümü:
 
-/* kodlar buraya */
+ucetambolunenler=[]
+sayilar.forEach((value)=> {if(value%3===0){ucetambolunenler.push(value)}})
+console.log(ucetambolunenler)
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ucebolunenlerintoplami = ucetambolunenler.reduce((total,current)=>{return total+current})
+console.log(ucebolunenlerintoplami)
 
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar=sayilar.filter(value=>value<500)
+console.log(besyuzdenkucuksayilar)
 
 // 3e çözümü
 
-/* kodlar buraya */
+ siralisayilar = besyuzdenkucuksayilar.toSorted(function(a, b){return a - b})
+ console.log(siralisayilar)
 
 // 3f çözümü
 
-/* kodlar buraya */
+const tekrar ={}
+sayilar.forEach((value,index)=>{
+  if(tekrar.hasOwnProperty(value)){
+    tekrar[value]++
+  }else{
+    tekrar[value] = 1;
+  }
+})
+tekraredensayilar =[]
+Object.entries(tekrar).forEach(([key,value])=>{if(value>1){tekraredensayilar.push(`${key} sayısı ${value} kere tekrar edilmiştir`)}})
+console.log(tekraredensayilar)
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
