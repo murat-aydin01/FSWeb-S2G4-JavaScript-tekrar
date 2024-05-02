@@ -37,6 +37,9 @@ VSCode ve Komut Satırını Kullanma:
 
 Projenizin içinde "split terminal"i tıklayarak ikinci bir terminal ekranı açın.
 
+
+edited by murat
+
 Açılan ikinci terminalde `npm start` yazıp çalıştırın.
 
 Bir terminal ekranında testleri çalıştırırken bir diğerinde ise debug yapabileceksin. Kodlarınızda güncelleme yaptıkça ilerlemeyi kontrol için `console.log`u kullanın.
